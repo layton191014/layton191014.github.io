@@ -156,7 +156,8 @@ function createDownloadLink(blob) {
 		  };
 		  var fd=new FormData();
 		  fd.append("audio_data",blob, filename);
-		  xhr.open("POST","upload.php",true);
+		  // xhr.open("POST","upload.php",true);
+		  xhr.open("POST","http://172.17.17.79:8000",true);
 		  xhr.send(fd);
 	})
 	li.appendChild(document.createTextNode (" "))//add a space in between
